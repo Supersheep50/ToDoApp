@@ -29,6 +29,21 @@ namespace ToDoApp
                 if (choice == "1")
                 {
                     AddTask.AddNewTask();
+                    Console.WriteLine("Would you like to add another task? (yes/no)");
+
+                    string addAnother = Console.ReadLine().ToLower();
+
+                    if (addAnother == "yes")
+                    {
+                        AddTask.AddNewTask();
+
+                    }
+                    else if (addAnother == "no")
+                    {
+                        Console.WriteLine("Returning to the main menu...");
+                        break;
+                    }
+                    
                 }
                 else if (choice == "2")
                 {
