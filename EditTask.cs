@@ -7,9 +7,8 @@ namespace ToDoApp
     {
         public static void UpdateTask()
         {
-
-            Console.WriteLine("Please enter the task number you want to edit:");
             ShowTasks.DisplayTasks();
+            Console.WriteLine("Please enter the task number you want to edit:");
             int index = int.Parse(Console.ReadLine()) - 1;
 
             if (index >= 0 && index < TaskStore.Tasks.Count)

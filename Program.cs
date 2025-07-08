@@ -12,9 +12,7 @@ namespace ToDoApp
             while (true)
             {
 
-                Console.WriteLine("Welcome to Jon's To-Do App!");
-                Console.WriteLine("This is a simple console application to manage your daily tasks.");
-                Console.WriteLine("You can add, view, edit and delete tasks.");
+                Console.WriteLine("Welcome to Steph's To-Do App!");
                 Console.WriteLine("What would you like to do? TELL MEEE!");
 
                 Console.WriteLine("\n---To-Do App Menu---");
@@ -29,21 +27,24 @@ namespace ToDoApp
                 if (choice == "1")
                 {
                     AddTask.AddNewTask();
-                    Console.WriteLine("Would you like to add another task? (yes/no)");
-
-                    string addAnother = Console.ReadLine().ToLower();
-
-                    if (addAnother == "yes")
+                    while (true)
                     {
-                        AddTask.AddNewTask();
 
+                        Console.WriteLine("Would you like to add another task? (yes/no)");
+
+                        string addAnother = Console.ReadLine().ToLower();
+
+                        if (addAnother == "yes")
+                        {
+                            AddTask.AddNewTask();
+
+                        }
+                        else if (addAnother == "no")
+                        {
+                            Console.WriteLine("Returning to the main menu...");
+                            break;
+                        }
                     }
-                    else if (addAnother == "no")
-                    {
-                        Console.WriteLine("Returning to the main menu...");
-                        break;
-                    }
-                    
                 }
                 else if (choice == "2")
                 {

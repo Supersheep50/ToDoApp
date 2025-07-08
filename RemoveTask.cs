@@ -8,11 +8,19 @@ namespace ToDoApp
         {
             ShowTasks.DisplayTasks();
             Console.WriteLine("Please enter a task to delete");
-            string taskDelete = Console.ReadLine();
+            int index = int.Parse(Console.ReadLine()) - 1;
+            string taskDelete = TaskStore.Tasks[index];
 
-            TaskStore.Tasks.Remove(taskDelete);
+            if (index >= 0 && index < TaskStore.Tasks.Count)
+            {
+                TaskStore.Tasks.Remove(taskDelete);
 
-            Console.WriteLine($"Task '{taskDelete}' has been removed successfully!");
+                Console.WriteLine($"Task '{taskDelete}' has been removed successfully!");
+            }
+            else
+            {
+                Console.WriteLine("Invalid task number. Please try again.");
+            }
         }
     }
 }
