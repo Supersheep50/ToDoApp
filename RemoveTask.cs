@@ -6,6 +6,7 @@ namespace ToDoApp
     {
         public static void DeleteTask()
         {
+            ShowTasks.DisplayTasks();
             Console.WriteLine("Please enter a task to delete");
             string taskDelete = Console.ReadLine();
 

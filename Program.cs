@@ -47,7 +47,7 @@ namespace ToDoApp
                 }
                 else if (choice == "2")
                 {
-                    // need to finish
+                    EditTask.UpdateTask();
                 }
                 else if (choice == "3")
                 {
